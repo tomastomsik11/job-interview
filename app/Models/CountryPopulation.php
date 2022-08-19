@@ -17,7 +17,6 @@ final class CountryPopulation extends BaseModel
         'population',
     ];
 
-
     /**
      * @var string[]
      */

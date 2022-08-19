@@ -106,7 +106,7 @@ class CountriesEndpointTest extends TestCase
 
             foreach ($item['populations'] as $year => $population) {
                 $country->Populations()->create([
-                    'year' => $year,
+                    'year'       => $year,
                     'population' => $population,
                 ]);
             }

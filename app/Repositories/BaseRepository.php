@@ -43,8 +43,7 @@ abstract class BaseRepository
         ];
 
         $options = array_merge($defaults, $options);
-
-        $query = $this->model->paginateFilters($options['filters'], $this->model::with('Populations'));
+        $query   = $this->model->paginateFilters($options['filters'], $this->model::with('Populations'));
 
         return $query->simplePaginate($options['per_page']);
     }

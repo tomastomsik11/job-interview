@@ -4,6 +4,10 @@ namespace App\Models\Filters;
 
 use Illuminate\Database\Eloquent\Builder;
 
+/**
+ * Class CountryFilter
+ * @package App\Models\Filters
+ */
 final class CountryFilter extends BaseFilter
 {
     /**

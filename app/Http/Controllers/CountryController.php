@@ -21,7 +21,6 @@ final class CountryController extends Controller
     {
     }
 
-
     /**
      * Get all countries
      * @return JsonResponse

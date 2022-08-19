@@ -5,7 +5,11 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CountriesPaginateResource extends JsonResource
+/**
+ * Class CountriesPaginateResource
+ * @package App\Http\Resources
+ */
+final class CountriesPaginateResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,9 +21,8 @@ class CountriesPaginateResource extends JsonResource
     {
         $paginator = $this->resource->toArray();
 
-
         $result = [
-            'current_page'  => $paginator['current_page'],
+            'current_page'   => $paginator['current_page'],
             'data'           => [],
             'first_page_url' => $paginator['first_page_url'],
             'from'           => $paginator['from'],
@@ -29,7 +32,6 @@ class CountriesPaginateResource extends JsonResource
             'prev_page_url'  => $paginator['prev_page_url'],
             'to'             => $paginator['to'],
         ];
-
 
         foreach ($paginator['data'] as $item) {
             $new_item = [
@@ -42,15 +44,13 @@ class CountriesPaginateResource extends JsonResource
 
             foreach ($item['populations'] as $population) {
                 $new_item['populations'][] = [
-                    'year' => $population['year'],
+                    'year'       => $population['year'],
                     'population' => $population['population'],
                 ];
             }
 
             $result['data'][] = $new_item;
         }
-
-
 
         return $result;
     }
