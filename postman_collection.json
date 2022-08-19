@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "9900bbe1-f518-4eb3-8d81-f4d8954bc71c",
+		"name": "Job interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22648410"
+	},
+	"item": [
+		{
+			"name": "get All",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api/v1/countries/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"countries",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paginator",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api/v1/countries?page=1&per_page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
